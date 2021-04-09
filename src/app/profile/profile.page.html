@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+  <div id="user-header" class="ion-padding">
+    
+    <!-- User Avatar (Profile Picture) -->
+    <ion-avatar>
+      <img src="assets/shapes.svg" alt="">
+    </ion-avatar>
+
+    <!-- Username -->
+    <div class="ion-text-center">
+      <h3>Guest User</h3>
+    </div>
+  </div>
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Today's Meal Plan</ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Give us Feedback</ion-title>
+  </ion-toolbar> 
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Terms and Conditions</ion-title>
+  </ion-toolbar>
+
+  <ion-button expand="full">Log Out</ion-button>
+
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="sessions" routerLink="/sessions">
+        <ion-icon name="barbell"></ion-icon>
+        <ion-label>Sessions</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="meals" routerLink="/meals">
+        <ion-icon name="fast-food"></ion-icon>
+        <ion-label>Meals</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="profile" routerLink="/profile">
+        <ion-icon name="person"></ion-icon>
+        <ion-label>Profile</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
+</ion-content>
+
+
+
+
+  
+  
+
+
+
