@@ -27,6 +27,26 @@ const routes: Routes = [
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },
+  {
+    path: 'football',
+    loadChildren: () => import('./football/football.module').then( m => m.FootballPageModule)
+  },
+  {
+    path: 'detail',
+    loadChildren: () => import('./detail/detail.module').then( m => m.DetailPageModule)
+  },
+  {
+    path: 'detail/:id',
+    loadChildren: () => import('./detail/detail.module').then( m => m.DetailPageModule)
+  },
+  {
+    path: 'gym',
+    loadChildren: () => import('./gym/gym.module').then( m => m.GymPageModule)
+  },
+  {
+    path: 'home-fitness',
+    loadChildren: () => import('./home-fitness/home-fitness.module').then( m => m.HomeFitnessPageModule)
+  },
 ];
 
 @NgModule({

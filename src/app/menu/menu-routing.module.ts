@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '',
     component: MenuPage,
     children: [
-      // duplicate here
+
       {
         path: 'sessions',
         loadChildren: () => import('../sessions/sessions.module').then(m => m.SessionsPageModule)
@@ -21,7 +21,15 @@ const routes: Routes = [
         path: 'profile',
         loadChildren: () => import('../profile/profile.module').then(m => m.ProfilePageModule)
       },
-      // end duplicate
+      {
+        path: 'football',
+        loadChildren: () => import('../football/football.module').then(m => m.FootballPageModule)
+      },
+      {
+        path: 'detail',
+        loadChildren: () => import('../detail/detail.module').then(m => m.DetailPageModule)
+      },
+
       {
         path: '',
         redirectTo: '/menu/sessions',
