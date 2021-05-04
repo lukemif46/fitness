@@ -1,13 +1,45 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start" >
-      <ion-back-button color="warning" defaultHref="/football"></ion-back-button>
+      <ion-back-button color="warning"  defaultHref="/football"></ion-back-button>
     </ion-buttons>
-    <ion-title>{{drillId}}</ion-title>
+    <ion-title>{{drills.title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   
-  <h2>{{drillId}}</h2>
+  <div class="ion-text-center" >
+    <h2>Workout Details</h2>
+  </div>
+
+  <ion-item text-wrap>Warm Up</ion-item>
+  <ion-item text-wrap>
+    <img src="assets/shapes.svg" width="30%" alt="">
+    <p>Lorem Ipsum is simply dummy text of the 
+      printing and typesetting industry. </p>
+  </ion-item>
+  <ion-item text-wrap>
+    <img src="assets/shapes.svg" width="30%" alt="">
+    <p>Lorem Ipsum is simply dummy text of the 
+      printing and typesetting industry. </p>
+  </ion-item>
+
+  <ion-item text-wrap>Exercise 1</ion-item>
+  <ion-item text-wrap>
+    <img src="assets/shapes.svg" width="30%" alt="">
+    <p>Lorem Ipsum is simply dummy text of the 
+      printing and typesetting industry. </p>
+  </ion-item>
+  <ion-item text-wrap>
+    <img src="assets/shapes.svg" width="30%" alt="">
+    <p>Lorem Ipsum is simply dummy text of the 
+      printing and typesetting industry. </p>
+  </ion-item>
+
+  <br>
+  <br>
+  <section class="full-width">
+    <ion-button expand="full" color="success">Start Session</ion-button>
+  </section>
 </ion-content>

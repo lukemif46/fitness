@@ -8,12 +8,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailPage implements OnInit {
   drillId;
-  drillName;
+  drills: any ={};
   constructor(
     private route: ActivatedRoute
   ) { 
-    this.drillId = this.route.snapshot.paramMap.get('id');
-    this.drillName = this.route.snapshot.paramMap.get('title');
+    // this.drillId = this.route.snapshot.paramMap.get('id');
+    this.route.queryParams.subscribe( res =>{
+      console.log(res);
+      this.drills = res;
+    })
   }
 
 

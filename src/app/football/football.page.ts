@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-football',
@@ -13,15 +14,21 @@ export class FootballPage implements OnInit {
     {id: 4, title: 'Control'},
     {id: 5, title: 'Defending'},
     {id: 6, title: 'Attacking'},
+    {id: 6, title: 'Goalkeeper Training'},
   ];
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
   
-  // goToDetail(drills) {
-  //   this.router.navigate(['/detail'],{
-  //     queryParams: drills
-  //   });
-  // }
+  goToDetail(drills) {
+
+    this.router.navigate(['/detail'],{
+      queryParams: drills
+    });
+  }
+
+  
 }
