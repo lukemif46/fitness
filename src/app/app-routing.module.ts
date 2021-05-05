@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'home-fitness',
     loadChildren: () => import('./home-fitness/home-fitness.module').then( m => m.HomeFitnessPageModule)
   },
+  {
+    path: 'gallery',
+    loadChildren: () => import('./gallery/gallery.module').then( m => m.GalleryPageModule)
+  },
 ];
 
 @NgModule({
