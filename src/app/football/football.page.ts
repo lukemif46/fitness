@@ -14,7 +14,6 @@ export class FootballPage implements OnInit {
     {id: 4, title: 'Control'},
     {id: 5, title: 'Defending'},
     {id: 6, title: 'Attacking'},
-    {id: 6, title: 'Goalkeeper Training'},
   ];
   constructor(
     private router: Router
