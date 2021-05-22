@@ -26,11 +26,12 @@ export class AlbumSelectorPage implements OnInit
     const photos = this.albumService.getPhotos();
     this.gallery.count = photos.length;
 
-    const randPhoto = photos.sort(() => Math.random() - 0.5).find((p,i) => i==0);
+    const randPhoto = photos.sort(() => Math.random() - 0.5).find((p, i) => i == 0);
     // use base64 for photos taken in app
     // or filePath for photos from gallery
     this.gallery.photo = randPhoto!.base64Data || randPhoto!.filePath;
   }
+
   chooseAlbum(name: string)
   {
     this.modalCtrl.dismiss(name);
@@ -41,4 +42,3 @@ export class AlbumSelectorPage implements OnInit
     this.modalCtrl.dismiss(null, 'cancel');
   }
 }
-
