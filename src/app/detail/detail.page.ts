@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./detail.page.scss'],
 })
 export class DetailPage implements OnInit {
+  
   drillId;
   drills: any ={};
   constructor(

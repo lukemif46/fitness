@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Gym } from '../struct/gym';
+import { GYM } from '../struct/gym-data';
 
 @Component({
   selector: 'app-gym',
@@ -7,13 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./gym.page.scss'],
 })
 export class GymPage implements OnInit {
-  bodyParts: any =[
-    {id: 1, title: 'Biceps'},
-    {id: 2, title: 'Triceps'},
-    {id: 3, title: 'Shoulders'},
-    {id: 4, title: 'Back'},
-    {id: 5, title: 'Chest'},
-  ];
+
+  gym: Gym[] = GYM;
   constructor(
     private router: Router
   ) { }
@@ -21,10 +18,10 @@ export class GymPage implements OnInit {
   ngOnInit() {
   }
   
-  goToDetail(bodyParts) {
+  goToDetail(gym) {
 
     this.router.navigate(['/detail'],{
-      queryParams: bodyParts
+      queryParams: gym
     });
   }
 
