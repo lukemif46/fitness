@@ -44,7 +44,4 @@ export const GYM: Gym[] = [
         image2: '/assets/Gym/lunge.jpg',
         image3: '/assets/Gym/leg-press.png',
     },
-    // {id: 4, title: 'Control'},
-    // {id: 5, title: 'Defending'},
-    // {id: 6, title: 'Attacking'},
 ]

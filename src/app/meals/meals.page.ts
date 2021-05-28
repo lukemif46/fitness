@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { Meals } from '../struct/meals';
+import { MEALS } from '../struct/meals-data';
 
 
 @Component({
@@ -8,8 +10,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./meals.page.scss'],
 })
 export class MealsPage implements OnInit {
+  meals: Meals[] = MEALS;
   formattedDate;
   constructor(
+    private router: Router
   ) { 
     this.getFormattedDate()
   }
@@ -26,8 +30,14 @@ export class MealsPage implements OnInit {
 
   ngOnInit() {
   }
+  goToDetail(meals) {
 
+    this.router.navigate(['/meals-detail'],{
+      queryParams: meals
+    });
+  }
 }
+
 
 
 

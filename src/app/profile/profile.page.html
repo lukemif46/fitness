@@ -14,35 +14,48 @@
 
     <!-- Username -->
     <div class="ion-text-center">
-      <h3>Guest User</h3>
+      <h3 *ngIf="name || surname">{{ name }} {{ surname }}</h3>
+      <h3 *ngIf="!name && !surname">Guest User</h3>
     </div>
   </div>
 
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Today's Meal Plan</ion-title>
-  </ion-toolbar>
+  <ion-list>
+    <!-- Name Input -->
+    <ion-item>
+      <ion-label position="floating">
+        Name
+        <ion-text color="danger">*</ion-text>
+      </ion-label>
 
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Give us Feedback</ion-title>
-  </ion-toolbar> 
+      <ion-input clearInput [(ngModel)]="name" (ionChange)="onChange('name', $event)"></ion-input>
+    </ion-item>
+    <!-- End Name Input -->
 
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Terms and Conditions</ion-title>
-  </ion-toolbar>
+    <!-- Surname Input -->
+    <ion-item>
+      <ion-label position="floating">
+        Surname
+        <ion-text color="danger">*</ion-text>
+      </ion-label>
 
-  <section class="full-width">
-    <ion-button expand="full" color="warning">Log out</ion-button>
-  </section>
+      <ion-input clearInput [(ngModel)]="surname" (ionChange)="onChange('surname', $event)"></ion-input>
+    </ion-item>
+    <!-- End Surname Input -->
 
-  </ion-content>
+    <div id="user-buttons" class="ion-padding">
+      <ion-tab-button tab="meals">
+        <ion-toolbar  color="light" class="ion-text-center">
+          <ion-label><h3>Today's Meal Plan</h3></ion-label>
+        </ion-toolbar>
+      </ion-tab-button>
+      <br>
+      <ion-tab-button tab="sessions">
+        <ion-toolbar color="light" class="ion-text-center">
+          <ion-label><h3>Start a Session</h3></ion-label>
+        </ion-toolbar>
+      </ion-tab-button>
+    </div>
+  </ion-list>
+</ion-content>
   
 

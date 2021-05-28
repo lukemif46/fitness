@@ -8,18 +8,27 @@ import { StorageService } from '../services/storage.service';
   templateUrl: './profile.page.html',
   styleUrls: ['./profile.page.scss'],
 })
-export class ProfilePage implements OnInit {
+export class ProfilePage implements OnInit
+{
+  // The user's name.
+  public name: string = "Redd";
 
-  //The user's profile picture
+  // The user's surname.
+  public surname: string = "Caruana";
+
+  // The user's profile picture.
   public avatarSrc: string = null;
 
   constructor(
     private modalCtrl: ModalController,
-    private storageService: StorageService
-  ) {  }
 
-  async ngOnInit() 
+    private storageService: StorageService
+  ) { }
+
+  async ngOnInit()
   {
+    this.name = await this.storageService.get('name'); 
+    this.surname = await this.storageService.get('surname'); 
     this.avatarSrc = await this.storageService.get('profilePic');
   }
 
@@ -28,10 +37,10 @@ export class ProfilePage implements OnInit {
    * @param key The storage key.
    * @param e The input event.
    */
-    onChange(key: string, e: any): void
-    {
-      this.storageService.set(key, e.detail.value);
-    }
+  onChange(key: string, e: any): void
+  {
+    this.storageService.set(key, e.detail.value);
+  }
 
   async openGallery()
   {
@@ -39,8 +48,8 @@ export class ProfilePage implements OnInit {
       component: GalleryPage
     });
 
-    modal.onWillDismiss().then(response =>{
-      if (response.role =='cancel') return;
+    modal.onWillDismiss().then(response => {
+      if (response.role == 'cancel') return;
 
       const photo = response.data;
 
@@ -58,5 +67,4 @@ export class ProfilePage implements OnInit {
 
     modal.present();
   }
-
 }

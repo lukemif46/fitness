@@ -47,6 +47,14 @@ const routes: Routes = [
     path: 'album-selector',
     loadChildren: () => import('./album-selector/album-selector.module').then( m => m.AlbumSelectorPageModule)
   },
+  {
+    path: 'meals-detsil',
+    loadChildren: () => import('./meals-detsil/meals-detsil.module').then( m => m.MealsDetsilPageModule)
+  },
+  {
+    path: 'meals-detail',
+    loadChildren: () => import('./meals-detail/meals-detail.module').then( m => m.MealsDetailPageModule)
+  },
 ];
 
 @NgModule({

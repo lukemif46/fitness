@@ -10,22 +10,16 @@
         <h3>Today {{formattedDate}}</h3>
       </div>
       <br>
-      <ion-item text-wrap>Breakfast</ion-item>
-      <ion-item text-wrap>
-        <img src="assets/meals2.png" width="30%" alt="">
-        <p>Lorem Ipsum is simply dummy text of the 
-          printing and typesetting industry. </p>
-      </ion-item>
-      <ion-item text-wrap>Lunch</ion-item>
-      <ion-item text-wrap>
-        <img src="assets/meals3.png" width="30%" alt="">
-        <p>Lorem Ipsum is simply dummy text of the 
-          printing and typesetting industry.</p>
-      </ion-item>
-      <ion-item text-wrap>Dinner</ion-item>
-      <ion-item text-wrap>
-        <img src="assets/meals1.png" width="30%" alt="">
-        <p>Lorem Ipsum is simply dummy text of the 
-          printing and typesetting industry.</p>
-      </ion-item>
-    </ion-content>
+
+      <ion-item *ngFor="let p of meals" (click)="goToDetail(p)"> 
+        
+        <div>
+          <ion-item text-wrap>{{p.type}}</ion-item>
+          <img src="{{p.image}}" width="30%" alt="">
+          <ion-item text-wrap>{{p.title}}</ion-item>
+        </div>
+          
+        
+      </ion-item> 
+
+</ion-content>
