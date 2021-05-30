@@ -8,11 +8,19 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let p of gym" (click)="goToDetail(p)">  
-      <ion-label>
-        <h1>{{p.title}}</h1>
-      </ion-label>
-    </ion-item> 
-  </ion-list>
+  <ion-card  id="title" *ngFor="let p of gym" (click)="goToDetail(p)">
+    
+    <ion-item color="light">
+      <IonLabel class="ion-text-center">{{p.title}}</IonLabel>
+    </ion-item>
+    <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <img src="{{p.image3}}"  alt="">
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

@@ -1,41 +1,84 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start" >
-      <ion-back-button color="warning"  defaultHref="/football"></ion-back-button>
+      <ion-back-button color="warning"  defaultHref="/menu/football"></ion-back-button>
     </ion-buttons>
     <ion-title>{{drills.title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  
-  <div class="ion-text-center" >
-    <h2>Workout Details</h2>
-  </div>
+  <ion-card id="details">
+    <ion-item color="dark"><h3>Workout Details</h3></ion-item>
+    <ion-card-content>
+      <ion-item color="light"><h2>Warm up</h2></ion-item>
+      <ion-grid>
+        <br>
+        <ion-row>
+          <ion-col size="6">
+            <img src="assets/Warm-up/warmup-1.jpg">
+          </ion-col>
+          <ion-col>
+            <h2 class="ion-text-right"><b>Warm up 1</b></h2>
+            <br>
+            <p class="ion-text-right">Lorem Ipsum is simply dummy text.</p>
+          </ion-col>
+        </ion-row>
+          <div style="width:100%; border-top: 1px solid #616161; "></div>
+        <br>
+        <ion-row>
+          <ion-col size="6">
+            <img src="assets/Warm-up/warmup-2.jpg">
+          </ion-col>
+          <ion-col>
+            <h2 class="ion-text-right"><b>Warm up 2</b></h2>
+            <br>
+            <p class="ion-text-right">Lorem Ipsum is simply dummy text.</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <br>
+      <ion-item color="light"><h2>Exercises</h2></ion-item>
+        <ion-grid>
+        <br>
+          <ion-row>
+            <ion-col size="6">
+              <img src="{{drills.image}}">
+            </ion-col>
+            <ion-col>
+              <h2 class="ion-text-right"><b>{{drills.subTitle}}</b></h2>
+              <br>
+            <p class="ion-text-right">Lorem Ipsum is simply dummy text.</p>
+            </ion-col>
+          </ion-row>
+          <div style="width:100%; border-top: 1px solid #616161; "></div>
+          <br>
+          <ion-row>
+            <ion-col size="6">
+              <img src="{{drills.image2}}">
+            </ion-col>
+            <ion-col>
+              <h2 class="ion-text-right"><b>{{drills.description}}</b></h2>
+              <br>
+              <p class="ion-text-right">Lorem Ipsum is simply dummy text.</p>
+            </ion-col>
+          </ion-row>
+          <div style="width:100%; border-top: 1px solid #616161; "></div>
+          <br>
+          <ion-row>
+            <ion-col size="6">
+              <img src="{{drills.image3}}">
+            </ion-col>
+            <ion-col>
+              <h2 class="ion-text-right"><b>{{drills.desc2}}</b></h2>
+              <br>
+            <p class="ion-text-right">Lorem Ipsum is simply dummy text.</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </ion-card-content>
+  </ion-card>
 
-  <ion-item text-wrap>Warm Up</ion-item>
-  <ion-item text-wrap>
-    <img src="assets/Warm-up/warmup-1.jpg" width="30%" alt="">
-    <p>Warm up 1 </p>
-  </ion-item>
-  
-  <ion-item text-wrap>
-    <img src="assets/Warm-up/warmup-2.jpg" width="30%" alt="">
-    <p>Warm up 2</p>
-  </ion-item>
 
-  <ion-item text-wrap>Exercises</ion-item>
-  <ion-item text-wrap>
-    <img src="{{drills.image}}" width="30%" alt="">
-    {{drills.subTitle}}
-  </ion-item>
-  <ion-item>
-    <img src="{{drills.image2}}" width="30%" alt="">
-    {{drills.description}}
-  </ion-item>  
-  <ion-item text-wrap>
-    <img src="{{drills.image3}}" width="30%" alt="">
-    {{drills.desc2}}
-  </ion-item>
 
 </ion-content>

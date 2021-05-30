@@ -11,15 +11,26 @@
       </div>
       <br>
 
-      <ion-item *ngFor="let p of meals" (click)="goToDetail(p)"> 
-        
-        <div>
-          <ion-item text-wrap>{{p.type}}</ion-item>
-          <img src="{{p.image}}" width="30%" alt="">
-          <ion-item text-wrap>{{p.title}}</ion-item>
-        </div>
-          
-        
-      </ion-item> 
+      <ion-card id="title" *ngFor="let p of meals" (click)="goToDetail(p)">
+        <ion-item color="light">{{p.type}}</ion-item>
+        <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <img src="{{p.image}}"  alt="">
+                </ion-col>
+                <ion-col>
+                  <h2>{{p.title}}</h2>
+                  <br>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+        </ion-card-content>
+      </ion-card>
+
+      
 
 </ion-content>
+
+

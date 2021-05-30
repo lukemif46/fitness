@@ -20,7 +20,7 @@ export class FootballPage implements OnInit {
   
   goToDetail(drills) {
 
-    this.router.navigate(['/detail'],{
+    this.router.navigate(['/menu/detail'],{
       queryParams: drills
     });
   }

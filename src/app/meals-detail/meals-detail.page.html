@@ -1,12 +1,86 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start" >
-      <ion-back-button color="warning"  defaultHref="/meals"></ion-back-button>
+      <ion-back-button color="warning"  defaultHref="/menu/meals"></ion-back-button>
     </ion-buttons>
     <ion-title>{{meals.title}}</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-MEalsssss
-</ion-content>
+  <div>
+      <img src="{{meals.image}}" alt="">
+  </div>
+  <ion-card id="ingredients">
+    <ion-item color="light">Ingredients</ion-item>
+    <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <p>{{meals.ing}}</p>
+            </ion-col>
+            <ion-col class="ion-text-right">
+              <p>{{meals.por}} </p>
+            </ion-col>
+          </ion-row>
+          <div style="width:100%; border-top: 1px solid #616161; "></div>
+          <ion-row>
+            <ion-col>
+              <p>{{meals.ing2}}</p>
+            </ion-col>
+            <ion-col class="ion-text-right">
+              <p>{{meals.por2}} </p>
+            </ion-col>
+          </ion-row>
+          <div style="width:100%; border-top: 1px solid #616161; "></div>
+          <ion-row>
+            <ion-col>
+              <p>{{meals.ing3}}</p>
+            </ion-col>
+            <ion-col class="ion-text-right">
+              <p>{{meals.por3}} </p>
+            </ion-col>
+          </ion-row>
+          <div style="width:100%; border-top: 1px solid #616161; "></div>
+          <ion-row>
+            <ion-col>
+              <p>{{meals.ing4}}</p>
+            </ion-col>
+            <ion-col class="ion-text-right">
+              <p>{{meals.por4}} </p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card id="instructions">
+    <ion-item color="light">How to make</ion-item>
+    <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="1">
+              <p>1.</p>
+            </ion-col>
+            <ion-col>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="1">
+              <p>2.</p>
+            </ion-col>
+            <ion-col>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="1">
+              <p>3.</p>
+            </ion-col>
+            <ion-col>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </ion-card-content>
+  </ion-card>
