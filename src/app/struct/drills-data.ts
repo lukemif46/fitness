@@ -33,7 +33,4 @@ export const DRILLS: Drill[] = [
         image2: '/assets/Shooting/zone-shooting.jpg',
         image3: '/assets/Shooting/feint-shooting.jpg',
     },
-    // {id: 4, title: 'Control'},
-    // {id: 5, title: 'Defending'},
-    // {id: 6, title: 'Attacking'},
 ]

@@ -11,10 +11,10 @@ import { StorageService } from '../services/storage.service';
 export class ProfilePage implements OnInit
 {
   // The user's name.
-  public name: string = "Redd";
+  public name: string = "";
 
   // The user's surname.
-  public surname: string = "Caruana";
+  public surname: string = "";
 
   // The user's profile picture.
   public avatarSrc: string = null;

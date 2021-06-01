@@ -13,7 +13,7 @@ export class MealsDetailPage implements OnInit {
   constructor(
     private route: ActivatedRoute
   ) { 
-    // this.drillId = this.route.snapshot.paramMap.get('id');
+    // this.mealsId = this.route.snapshot.paramMap.get('id');
     this.route.queryParams.subscribe( res =>{
       console.log(res);
       this.meals = res;
