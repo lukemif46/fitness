@@ -67,4 +67,6 @@ export class ProfilePage implements OnInit
 
     modal.present();
   }
+
+  
 }
